@@ -6,7 +6,7 @@
     <script type="text/javascript">
 
     var audio = new Audio('Latigazo.mp3');
-    var comprobar=0;
+
 
     function sleep(millisegundos) {
     var inicio = new Date().getTime();
@@ -14,13 +14,13 @@
     }
 
     function start() {
-      while (comprobar <= 5 ) {
+
 
           audio.loop=true;
           audio.play()
-          comprobar++;
+
           sleep(2000);
-        }
+
     }
 
     function stop() {
