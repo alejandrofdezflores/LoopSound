@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+    var audio = new Audio('Latigazo.mp3');
+    var comprobar=0;
+
+    function sleep(millisegundos) {
+    var inicio = new Date().getTime();
+    while ((new Date().getTime() - inicio) < millisegundos);
+    }
+
+    function start() {
+      while (comprobar <= 5 ) {
+
+          audio.loop=true;
+          audio.play()
+          comprobar++;
+          sleep(2000);
+        }
+    }
+
+    function stop() {
+      audio.pause();
+    }
+
+    </script>
+  </head>
+  <body>
+<button onclick="start()">Play</button>
+<button onclick="stop()">Stop</button>
+  </body>
+</html>
